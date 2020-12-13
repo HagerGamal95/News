@@ -7,8 +7,9 @@
 
 import UIKit
 
+typealias CustomView = CustomViewNibLoadable & UISetup
+
 protocol CustomViewNibLoadable: NibLoadable {
-    
     var containerView: UIView! { get set }
     func loadView()
 }
@@ -22,7 +23,3 @@ extension CustomViewNibLoadable where Self: UIView {
             .clear
     }
 }
-
-typealias CustomView = CustomViewNibLoadable & UISetup
-
-

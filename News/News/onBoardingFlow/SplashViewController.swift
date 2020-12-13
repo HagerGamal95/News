@@ -8,43 +8,52 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-    var decodeSetting: Setting? {
+    var settings: Setting? {
         get {
-            return UserDefaults.get(withKey: kSetting)
+            guard let data = UserDefaults.standard.value(forKey: kSetting) as? Data else { return nil }
+            return try? JSONDecoder().decode(Setting.self, from: data)
         }
         set {
-            UserDefaults.set(object: newValue, withkey: kSetting)
+            let data = try? JSONEncoder().encode(newValue)
+            UserDefaults.standard.setValue(data, forKey: kSetting)
+            UserDefaults.standard.synchronize()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigate()
-
     }
-    func navigate(){
-        // Do any additional setup after loading the view.
-        if (decodeSetting != nil) {
-            //navigate to home
-            self.present(storyBoardName: "Main", controllerId: "HomeViewController")
-
-        }else{
-           //navigate to settingVC
-            self.present(storyBoardName: "Main", controllerId: "SettingsViewController")
+    
+    private func navigate() {
+        if settings == nil {
+            navigateToSettings()
+        } else {
+            navigateToHome()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func navigateToSettings() {
+        guard let settingsViewController = createViewControlller(controllerId: "SettingsViewController") as? SettingsViewController else { return }
+        settingsViewController.delegate = self
+        settingsViewController.modalPresentationStyle = .fullScreen
+        self.present(settingsViewController, animated: true)
     }
-    */
+    
+    private func navigateToHome() {
+        let viewController = createViewControlller(controllerId: "HomeViewController")
+        window?.rootViewController = viewController
+    }
+}
 
+extension SplashViewController : SettingsViewControllerDelegate{
+    func selectionsConfirmed(settings: Setting) {
+        self.settings = settings
+        self.navigate()
+    }
 }

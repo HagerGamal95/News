@@ -52,38 +52,113 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="country"/>
                                 <connections>
-                                    <segue destination="wXr-eb-hu4" kind="show" id="YiQ-wd-MJD"/>
+                                    <action selector="selectCountryClicked:" destination="fGm-gu-9W2" eventType="touchUpInside" id="uCy-v3-yVN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-5F-CNW">
-                                <rect key="frame" x="176" y="433" width="63" height="30"/>
+                                <rect key="frame" x="176" y="396" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="language"/>
+                                <connections>
+                                    <action selector="selectLanguageClicked:" destination="fGm-gu-9W2" eventType="touchUpInside" id="0Ia-Af-YcD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASq-cr-Zmu">
                                 <rect key="frame" x="171" y="533" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="categories"/>
+                                <connections>
+                                    <action selector="selectCategoriesClicked:" destination="fGm-gu-9W2" eventType="touchUpInside" id="0RH-jW-Lcj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEj-ls-KoA">
+                                <rect key="frame" x="14" y="660" width="380" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRu-gr-phO">
+                                <rect key="frame" x="20" y="455" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO4-DG-mTs">
+                                <rect key="frame" x="20" y="341" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8E-kV-Ax1">
+                                <rect key="frame" x="20" y="730" width="374" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="fGm-gu-9W2" eventType="touchUpInside" id="xoT-gc-ubO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nvi-z0-hZn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nvi-z0-hZn" firstAttribute="trailing" secondItem="H8E-kV-Ax1" secondAttribute="trailing" constant="20" id="3Sd-Yy-iZk"/>
+                            <constraint firstItem="nvi-z0-hZn" firstAttribute="bottom" secondItem="H8E-kV-Ax1" secondAttribute="bottom" constant="102" id="DqV-DX-PRj"/>
+                            <constraint firstItem="H8E-kV-Ax1" firstAttribute="leading" secondItem="nvi-z0-hZn" secondAttribute="leading" constant="20" id="juK-p2-GAs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="saveButton" destination="H8E-kV-Ax1" id="AYU-48-AVT"/>
+                        <outlet property="selectCountryLabel" destination="OO4-DG-mTs" id="PAY-Mv-8Ow"/>
+                        <outlet property="selectLanguageLabel" destination="hRu-gr-phO" id="eAC-xg-abx"/>
+                        <outlet property="selectedCategoriesLabel" destination="MEj-ls-KoA" id="caW-Xk-vID"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKY-LS-DoV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="378"/>
+            <point key="canvasLocation" x="-233.33333333333334" y="377.67857142857139"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="l6m-y8-he0">
+        <!--Multi Selection View Controller-->
+        <scene sceneID="xzo-9M-j7p">
             <objects>
-                <viewController id="wXr-eb-hu4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZZq-TG-7oD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController storyboardIdentifier="MultiSelectionViewController" id="knP-my-zz4" customClass="MultiSelectionViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lc2-Xs-wjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4A-qD-3D7" customClass="SelectionsView" customModule="News" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u91-ZD-hQW" customClass="MultiSelectionsView" customModule="News" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E0D-eg-rPH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E0D-eg-rPH" firstAttribute="bottom" secondItem="u91-ZD-hQW" secondAttribute="bottom" id="JuO-7O-dqv"/>
+                            <constraint firstItem="u91-ZD-hQW" firstAttribute="leading" secondItem="E0D-eg-rPH" secondAttribute="leading" id="KTX-iw-FYm"/>
+                            <constraint firstItem="E0D-eg-rPH" firstAttribute="trailing" secondItem="u91-ZD-hQW" secondAttribute="trailing" id="Si1-Yz-t0z"/>
+                            <constraint firstItem="u91-ZD-hQW" firstAttribute="top" secondItem="E0D-eg-rPH" secondAttribute="top" id="VQQ-F8-IBe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="multiSelectionView" destination="u91-ZD-hQW" id="2ei-4N-NSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3H-bd-lrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="1045"/>
+        </scene>
+        <!--Single Selection View Controller-->
+        <scene sceneID="l6m-y8-he0">
+            <objects>
+                <viewController storyboardIdentifier="SingleSelectionViewController" id="wXr-eb-hu4" customClass="SingleSelectionViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZZq-TG-7oD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4A-qD-3D7" customClass="SingleSelectionView" customModule="News" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -97,6 +172,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D67-lz-UQs"/>
+                    <connections>
+                        <outlet property="singleSelectionView" destination="a4A-qD-3D7" id="bHk-L1-X8y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHb-4U-3Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

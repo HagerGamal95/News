@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionsView" customModule="News" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="iN0-l3-epB" id="Jni-5J-nHc"/>
+                <outlet property="saveButton" destination="gfz-8q-gVq" id="MlX-bp-pBW"/>
                 <outlet property="tableView" destination="nv7-fk-Hhn" id="lwf-Ne-DL8"/>
                 <outlet property="titleLabel" destination="P8q-HK-ZO2" id="8T6-qT-lO4"/>
             </connections>
@@ -20,27 +21,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-HK-ZO2">
-                    <rect key="frame" x="20" y="64" width="374" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-HK-ZO2">
+                    <rect key="frame" x="20" y="64" width="330" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-fk-Hhn">
-                    <rect key="frame" x="20" y="105" width="374" height="737"/>
+                    <rect key="frame" x="20" y="114" width="374" height="728"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-8q-gVq">
+                    <rect key="frame" x="360" y="64" width="34" height="30"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveClicked:" destination="-1" eventType="touchUpInside" id="gln-RC-6G2"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="nv7-fk-Hhn" firstAttribute="top" secondItem="P8q-HK-ZO2" secondAttribute="bottom" constant="20" id="7tR-3s-Zfg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nv7-fk-Hhn" secondAttribute="bottom" constant="20" id="KnE-ms-8rB"/>
+                <constraint firstItem="gfz-8q-gVq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="O2a-Se-Trr"/>
                 <constraint firstItem="P8q-HK-ZO2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SFR-HZ-X5n"/>
+                <constraint firstItem="gfz-8q-gVq" firstAttribute="leading" secondItem="P8q-HK-ZO2" secondAttribute="trailing" constant="10" id="WVV-vk-NEE"/>
                 <constraint firstItem="nv7-fk-Hhn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bns-8V-bDd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nv7-fk-Hhn" secondAttribute="trailing" constant="20" id="ff5-kD-ysh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P8q-HK-ZO2" secondAttribute="trailing" constant="20" id="iiZ-mt-XD3"/>
+                <constraint firstItem="nv7-fk-Hhn" firstAttribute="top" secondItem="gfz-8q-gVq" secondAttribute="bottom" constant="20" id="hra-ZZ-u5N"/>
                 <constraint firstItem="P8q-HK-ZO2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="s1J-Qx-wOa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gfz-8q-gVq" secondAttribute="trailing" constant="20" id="yw8-Ul-145"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="75" y="64"/>

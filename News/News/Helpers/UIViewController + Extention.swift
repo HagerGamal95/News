@@ -7,10 +7,17 @@
 
 import Foundation
 import UIKit
+
 extension UIViewController{
-    func present(storyBoardName : String , controllerId : String){
+    func createViewControlller(storyBoardName: String = "Main", controllerId: String) -> UIViewController {
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: controllerId)
-        present(controller, animated: true)
+        return storyboard.instantiateViewController(identifier: controllerId)
     }
+    
+    var window: UIWindow? {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return nil }
+        return window
+    }
+    
 }

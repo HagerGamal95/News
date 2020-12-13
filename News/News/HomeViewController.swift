@@ -11,7 +11,9 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let settings: Setting? = UserDefaults.get(withKey: kSetting)
+        print(settings)
     }
 
 
