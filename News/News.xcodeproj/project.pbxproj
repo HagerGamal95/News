@@ -9,12 +9,29 @@
 /* Begin PBXBuildFile section */
 		0129EF63258611B800488AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF62258611B800488AEC /* AppDelegate.swift */; };
 		0129EF65258611B800488AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF64258611B800488AEC /* SceneDelegate.swift */; };
-		0129EF67258611B800488AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF66258611B800488AEC /* ViewController.swift */; };
+		0129EF67258611B800488AEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF66258611B800488AEC /* HomeViewController.swift */; };
 		0129EF6A258611B800488AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0129EF68258611B800488AEC /* Main.storyboard */; };
 		0129EF6C258611B900488AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0129EF6B258611B900488AEC /* Assets.xcassets */; };
 		0129EF6F258611B900488AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0129EF6D258611B900488AEC /* LaunchScreen.storyboard */; };
 		0129EF7A258611B900488AEC /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF79258611B900488AEC /* NewsTests.swift */; };
 		0129EF85258611B900488AEC /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF84258611B900488AEC /* NewsUITests.swift */; };
+		0129EF972586149500488AEC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EF962586149500488AEC /* SplashViewController.swift */; };
+		0129EFA22586162700488AEC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFA12586162700488AEC /* Constants.swift */; };
+		0129EFA8258619AF00488AEC /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFA7258619AF00488AEC /* Setting.swift */; };
+		0129EFAE25862F7B00488AEC /* UserDefaultsDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */; };
+		0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */; };
+		0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFB7258636A300488AEC /* SettingsViewController.swift */; };
+		0129EFBE25863C9500488AEC /* SelectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFBD25863C9500488AEC /* SelectionsView.swift */; };
+		0129EFC625863CA900488AEC /* SelectionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0129EFC525863CA900488AEC /* SelectionsView.xib */; };
+		0129EFCC25864C5C00488AEC /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFCA25864C5C00488AEC /* SelectionTableViewCell.swift */; };
+		0129EFCD25864C5C00488AEC /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0129EFCB25864C5C00488AEC /* SelectionTableViewCell.xib */; };
+		0129EFD3258651C500488AEC /* NibLoadable+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */; };
+		0129EFDB2586520100488AEC /* CustomViewNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */; };
+		0129EFE02586523100488AEC /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFDF2586523100488AEC /* UIView+extension.swift */; };
+		0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFE525865BBC00488AEC /* SingleSelectionView.swift */; };
+		0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFEB25867D8C00488AEC /* BaseNews.swift */; };
+		0129EFF425867DA700488AEC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFF325867DA700488AEC /* Article.swift */; };
+		0129EFF925867DC200488AEC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFF825867DC200488AEC /* Source.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +55,7 @@
 		0129EF5F258611B800488AEC /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0129EF62258611B800488AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0129EF64258611B800488AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0129EF66258611B800488AEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0129EF66258611B800488AEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0129EF69258611B800488AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0129EF6B258611B900488AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0129EF6E258611B900488AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +66,23 @@
 		0129EF80258611B900488AEC /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0129EF84258611B900488AEC /* NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITests.swift; sourceTree = "<group>"; };
 		0129EF86258611B900488AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0129EF962586149500488AEC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0129EFA12586162700488AEC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0129EFA7258619AF00488AEC /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDecoder.swift; sourceTree = "<group>"; };
+		0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extention.swift"; sourceTree = "<group>"; };
+		0129EFB7258636A300488AEC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0129EFBD25863C9500488AEC /* SelectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionsView.swift; sourceTree = "<group>"; };
+		0129EFC525863CA900488AEC /* SelectionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionsView.xib; sourceTree = "<group>"; };
+		0129EFCA25864C5C00488AEC /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		0129EFCB25864C5C00488AEC /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NibLoadable+Reusable.swift"; sourceTree = "<group>"; };
+		0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewNibLoadable.swift; sourceTree = "<group>"; };
+		0129EFDF2586523100488AEC /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		0129EFE525865BBC00488AEC /* SingleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionView.swift; sourceTree = "<group>"; };
+		0129EFEB25867D8C00488AEC /* BaseNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNews.swift; sourceTree = "<group>"; };
+		0129EFF325867DA700488AEC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		0129EFF825867DC200488AEC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +133,18 @@
 		0129EF61258611B800488AEC /* News */ = {
 			isa = PBXGroup;
 			children = (
+				0129EFFD25867DEC00488AEC /* Models */,
+				0129EFEA25867CBA00488AEC /* NetworkLayer */,
+				0129EFAC25862F5100488AEC /* Helpers */,
+				0129EF952586146200488AEC /* onBoardingFlow */,
 				0129EF62258611B800488AEC /* AppDelegate.swift */,
 				0129EF64258611B800488AEC /* SceneDelegate.swift */,
-				0129EF66258611B800488AEC /* ViewController.swift */,
+				0129EF66258611B800488AEC /* HomeViewController.swift */,
 				0129EF68258611B800488AEC /* Main.storyboard */,
 				0129EF6B258611B900488AEC /* Assets.xcassets */,
 				0129EF6D258611B900488AEC /* LaunchScreen.storyboard */,
 				0129EF70258611B900488AEC /* Info.plist */,
+				0129EFA12586162700488AEC /* Constants.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -126,6 +165,74 @@
 				0129EF86258611B900488AEC /* Info.plist */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		0129EF952586146200488AEC /* onBoardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFBC25863BDB00488AEC /* views */,
+				0129EF962586149500488AEC /* SplashViewController.swift */,
+				0129EFB7258636A300488AEC /* SettingsViewController.swift */,
+			);
+			path = onBoardingFlow;
+			sourceTree = "<group>";
+		};
+		0129EFAC25862F5100488AEC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFD1258651B300488AEC /* protocols */,
+				0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */,
+				0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */,
+				0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */,
+				0129EFDF2586523100488AEC /* UIView+extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0129EFBC25863BDB00488AEC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFBD25863C9500488AEC /* SelectionsView.swift */,
+				0129EFC525863CA900488AEC /* SelectionsView.xib */,
+				0129EFCA25864C5C00488AEC /* SelectionTableViewCell.swift */,
+				0129EFCB25864C5C00488AEC /* SelectionTableViewCell.xib */,
+				0129EFE525865BBC00488AEC /* SingleSelectionView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0129EFD1258651B300488AEC /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		0129EFEA25867CBA00488AEC /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0129F00125867F3F00488AEC /* Service Manager */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		0129EFFD25867DEC00488AEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFEB25867D8C00488AEC /* BaseNews.swift */,
+				0129EFF325867DA700488AEC /* Article.swift */,
+				0129EFF825867DC200488AEC /* Source.swift */,
+				0129EFA7258619AF00488AEC /* Setting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0129F00125867F3F00488AEC /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Service Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0129EF6F258611B900488AEC /* LaunchScreen.storyboard in Resources */,
+				0129EFCD25864C5C00488AEC /* SelectionTableViewCell.xib in Resources */,
 				0129EF6C258611B900488AEC /* Assets.xcassets in Resources */,
 				0129EF6A258611B800488AEC /* Main.storyboard in Resources */,
+				0129EFC625863CA900488AEC /* SelectionsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +367,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0129EF67258611B800488AEC /* ViewController.swift in Sources */,
+				0129EFA22586162700488AEC /* Constants.swift in Sources */,
+				0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */,
+				0129EF67258611B800488AEC /* HomeViewController.swift in Sources */,
+				0129EFAE25862F7B00488AEC /* UserDefaultsDecoder.swift in Sources */,
+				0129EFCC25864C5C00488AEC /* SelectionTableViewCell.swift in Sources */,
+				0129EFD3258651C500488AEC /* NibLoadable+Reusable.swift in Sources */,
+				0129EFDB2586520100488AEC /* CustomViewNibLoadable.swift in Sources */,
+				0129EFA8258619AF00488AEC /* Setting.swift in Sources */,
 				0129EF63258611B800488AEC /* AppDelegate.swift in Sources */,
+				0129EF972586149500488AEC /* SplashViewController.swift in Sources */,
 				0129EF65258611B800488AEC /* SceneDelegate.swift in Sources */,
+				0129EFE02586523100488AEC /* UIView+extension.swift in Sources */,
+				0129EFBE25863C9500488AEC /* SelectionsView.swift in Sources */,
+				0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */,
+				0129EFF925867DC200488AEC /* Source.swift in Sources */,
+				0129EFF425867DA700488AEC /* Article.swift in Sources */,
+				0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */,
+				0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
