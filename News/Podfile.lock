@@ -1,24 +1,30 @@
 PODS:
   - Alamofire (4.8.2)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Kingfisher (~> 5.13)
   - R.swift (~> 5.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: 192bdf03430edce3e97e60feac3504dabff1af7d
+PODFILE CHECKSUM: 193aa0a0b48d11c0c15ed73d2ee873a019baa1ec
 
 COCOAPODS: 1.10.0

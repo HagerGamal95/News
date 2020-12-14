@@ -36,6 +36,20 @@
 		0129F0142586A0DA00488AEC /* MultiSelectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */; };
 		0129F0192586A5F200488AEC /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */; };
 		0129F01E2586D75400488AEC /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F01D2586D75400488AEC /* LocalStore.swift */; };
+		0129F02325879DBD00488AEC /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02225879DBD00488AEC /* AlamofireExtensions.swift */; };
+		0129F02825879DDB00488AEC /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02725879DDB00488AEC /* APIFetcher.swift */; };
+		0129F02D25879DFE00488AEC /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02C25879DFE00488AEC /* CustomError.swift */; };
+		0129F03325879E2500488AEC /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F03225879E2500488AEC /* NetworkProtocols.swift */; };
+		0129F03925879E6300488AEC /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F03825879E6300488AEC /* BaseResponse.swift */; };
+		0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F03E25879EC500488AEC /* BaseRequest.swift */; };
+		0129F0442587A45800488AEC /* HeadlinesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0432587A45800488AEC /* HeadlinesRequest.swift */; };
+		0129F0492587A53D00488AEC /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0482587A53D00488AEC /* APIs.swift */; };
+		0129F04E2587ADCC00488AEC /* HeadlinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */; };
+		0129F05C2587CFD300488AEC /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */; };
+		0129F05D2587CFD300488AEC /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */; };
+		0129F0652587CFFA00488AEC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0642587CFFA00488AEC /* CardView.swift */; };
+		0129F0702587D56E00488AEC /* TableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F06F2587D56E00488AEC /* TableViewExtention.swift */; };
+		0129F07F2587D8AB00488AEC /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */; };
 		6230B8F275A9A0CC108BADDE /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */; };
 		93E26932220341E3D3D9097D /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF37809CDA3AEA04C21B04F /* Pods_News_NewsUITests.framework */; };
 		DE90DDAF7AB39D0D016BAEF9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E126D0CE273F5A97C75B05 /* Pods_News.framework */; };
@@ -94,6 +108,20 @@
 		0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionsView.swift; sourceTree = "<group>"; };
 		0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
 		0129F01D2586D75400488AEC /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		0129F02225879DBD00488AEC /* AlamofireExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExtensions.swift; sourceTree = "<group>"; };
+		0129F02725879DDB00488AEC /* APIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
+		0129F02C25879DFE00488AEC /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		0129F03225879E2500488AEC /* NetworkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
+		0129F03825879E6300488AEC /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		0129F03E25879EC500488AEC /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		0129F0432587A45800488AEC /* HeadlinesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesRequest.swift; sourceTree = "<group>"; };
+		0129F0482587A53D00488AEC /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewModel.swift; sourceTree = "<group>"; };
+		0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
+		0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineTableViewCell.xib; sourceTree = "<group>"; };
+		0129F0642587CFFA00488AEC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0129F06F2587D56E00488AEC /* TableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtention.swift; sourceTree = "<group>"; };
+		0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
 		0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C943990D74B0C4888FFB5D /* Pods-NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-NewsTests/Pods-NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28E126D0CE273F5A97C75B05 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,21 +186,14 @@
 		0129EF61258611B800488AEC /* News */ = {
 			isa = PBXGroup;
 			children = (
-				0129EFFD25867DEC00488AEC /* Models */,
-				0129EFEA25867CBA00488AEC /* NetworkLayer */,
+				0129F0552587CEA300488AEC /* Modules */,
 				0129EFAC25862F5100488AEC /* Helpers */,
-				0129EF952586146200488AEC /* onBoardingFlow */,
 				0129EF62258611B800488AEC /* AppDelegate.swift */,
 				0129EF64258611B800488AEC /* SceneDelegate.swift */,
-				0129EF66258611B800488AEC /* HomeViewController.swift */,
 				0129EF68258611B800488AEC /* Main.storyboard */,
 				0129EF6B258611B900488AEC /* Assets.xcassets */,
 				0129EF6D258611B900488AEC /* LaunchScreen.storyboard */,
 				0129EF70258611B900488AEC /* Info.plist */,
-				0129EFA12586162700488AEC /* Constants.swift */,
-				0129F00E2586934800488AEC /* SingleSelectionViewController.swift */,
-				0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */,
-				0129F01D2586D75400488AEC /* LocalStore.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -198,9 +219,10 @@
 		0129EF952586146200488AEC /* onBoardingFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0129F0572587CEF000488AEC /* Models */,
+				0129F0562587CED900488AEC /* controllers */,
 				0129EFBC25863BDB00488AEC /* views */,
-				0129EF962586149500488AEC /* SplashViewController.swift */,
-				0129EFB7258636A300488AEC /* SettingsViewController.swift */,
+				0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */,
 			);
 			path = onBoardingFlow;
 			sourceTree = "<group>";
@@ -208,11 +230,15 @@
 		0129EFAC25862F5100488AEC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0129EFD1258651B300488AEC /* protocols */,
+				0129EFA12586162700488AEC /* Constants.swift */,
+				0129F01D2586D75400488AEC /* LocalStore.swift */,
+				0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */,
 				0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */,
 				0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */,
 				0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */,
 				0129EFDF2586523100488AEC /* UIView+extension.swift */,
+				0129F06F2587D56E00488AEC /* TableViewExtention.swift */,
+				0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -230,18 +256,13 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		0129EFD1258651B300488AEC /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */,
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
 		0129EFEA25867CBA00488AEC /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0129F03D25879EA800488AEC /* Request */,
+				0129F03725879E4600488AEC /* Response */,
 				0129F00125867F3F00488AEC /* Service Manager */,
+				0129F0482587A53D00488AEC /* APIs.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -252,7 +273,6 @@
 				0129EFEB25867D8C00488AEC /* BaseNews.swift */,
 				0129EFF325867DA700488AEC /* Article.swift */,
 				0129EFF825867DC200488AEC /* Source.swift */,
-				0129EFA7258619AF00488AEC /* Setting.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,8 +280,86 @@
 		0129F00125867F3F00488AEC /* Service Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0129F02225879DBD00488AEC /* AlamofireExtensions.swift */,
+				0129F02725879DDB00488AEC /* APIFetcher.swift */,
+				0129F02C25879DFE00488AEC /* CustomError.swift */,
+				0129F03225879E2500488AEC /* NetworkProtocols.swift */,
 			);
 			name = "Service Manager";
+			sourceTree = "<group>";
+		};
+		0129F03725879E4600488AEC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				0129F03825879E6300488AEC /* BaseResponse.swift */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
+		0129F03D25879EA800488AEC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				0129F03E25879EC500488AEC /* BaseRequest.swift */,
+				0129F0432587A45800488AEC /* HeadlinesRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		0129F0542587CE8000488AEC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0129F0592587CF8800488AEC /* Views */,
+				0129EFFD25867DEC00488AEC /* Models */,
+				0129F0582587CF2800488AEC /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0129F0552587CEA300488AEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFEA25867CBA00488AEC /* NetworkLayer */,
+				0129EF952586146200488AEC /* onBoardingFlow */,
+				0129F0542587CE8000488AEC /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0129F0562587CED900488AEC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */,
+				0129F00E2586934800488AEC /* SingleSelectionViewController.swift */,
+				0129EF962586149500488AEC /* SplashViewController.swift */,
+				0129EFB7258636A300488AEC /* SettingsViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		0129F0572587CEF000488AEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFA7258619AF00488AEC /* Setting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0129F0582587CF2800488AEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0129EF66258611B800488AEC /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0129F0592587CF8800488AEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */,
+				0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */,
+				0129F0642587CFFA00488AEC /* CardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92ACC443796C2F2E9AAD0A9A /* Pods */ = {
@@ -398,6 +496,7 @@
 				0129EF6F258611B900488AEC /* LaunchScreen.storyboard in Resources */,
 				0129EFCD25864C5C00488AEC /* SelectionTableViewCell.xib in Resources */,
 				0129EF6C258611B900488AEC /* Assets.xcassets in Resources */,
+				0129F05D2587CFD300488AEC /* HeadlineTableViewCell.xib in Resources */,
 				0129EF6A258611B800488AEC /* Main.storyboard in Resources */,
 				0129EFC625863CA900488AEC /* SelectionsView.xib in Resources */,
 			);
@@ -527,27 +626,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0129F02D25879DFE00488AEC /* CustomError.swift in Sources */,
 				0129EFA22586162700488AEC /* Constants.swift in Sources */,
 				0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */,
 				0129EF67258611B800488AEC /* HomeViewController.swift in Sources */,
 				0129EFAE25862F7B00488AEC /* UserDefaultsDecoder.swift in Sources */,
 				0129EFCC25864C5C00488AEC /* SelectionTableViewCell.swift in Sources */,
+				0129F03325879E2500488AEC /* NetworkProtocols.swift in Sources */,
+				0129F07F2587D8AB00488AEC /* DateFormatter+extension.swift in Sources */,
 				0129EFD3258651C500488AEC /* NibLoadable+Reusable.swift in Sources */,
 				0129EFDB2586520100488AEC /* CustomViewNibLoadable.swift in Sources */,
+				0129F02325879DBD00488AEC /* AlamofireExtensions.swift in Sources */,
 				0129EFA8258619AF00488AEC /* Setting.swift in Sources */,
 				0129EF63258611B800488AEC /* AppDelegate.swift in Sources */,
 				0129EF972586149500488AEC /* SplashViewController.swift in Sources */,
 				0129EF65258611B800488AEC /* SceneDelegate.swift in Sources */,
 				0129F0192586A5F200488AEC /* MultiSelectionViewController.swift in Sources */,
 				0129EFE02586523100488AEC /* UIView+extension.swift in Sources */,
+				0129F02825879DDB00488AEC /* APIFetcher.swift in Sources */,
 				0129EFBE25863C9500488AEC /* SelectionsView.swift in Sources */,
+				0129F03925879E6300488AEC /* BaseResponse.swift in Sources */,
+				0129F05C2587CFD300488AEC /* HeadlineTableViewCell.swift in Sources */,
+				0129F0702587D56E00488AEC /* TableViewExtention.swift in Sources */,
+				0129F04E2587ADCC00488AEC /* HeadlinesViewModel.swift in Sources */,
 				0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */,
 				0129EFF925867DC200488AEC /* Source.swift in Sources */,
 				0129EFF425867DA700488AEC /* Article.swift in Sources */,
 				0129F01E2586D75400488AEC /* LocalStore.swift in Sources */,
+				0129F0442587A45800488AEC /* HeadlinesRequest.swift in Sources */,
 				0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */,
+				0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */,
 				0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */,
 				0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */,
+				0129F0492587A53D00488AEC /* APIs.swift in Sources */,
+				0129F0652587CFFA00488AEC /* CardView.swift in Sources */,
 				0129F0142586A0DA00488AEC /* MultiSelectionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

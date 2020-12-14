@@ -12,6 +12,9 @@ target 'News' do
 
   # R.swift
   pod 'R.swift', '~> 5.1'
+  
+  #images
+  pod 'Kingfisher', '~> 5.13'
 
   target 'NewsTests' do
     inherit! :search_paths
