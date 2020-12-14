@@ -22,7 +22,17 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateSaveButton()
+        updateViews()
+    }
+    
+    private func updateViews() {
+        self.selectCountryLabel.text = settings.country?.rawValue
+        self.selectLanguageLabel.text = settings.language?.rawValue
+        if let categories = settings.categories {
+            self.selectedCategoriesLabel.text = (categories.map{$0.rawValue}).joined(separator: ", ")
+        }
+        
+        saveButton.isEnabled = settings.country != nil && settings.language != nil && settings.categories != nil
     }
     
     @IBAction func selectCountryClicked(_ sender: Any) {
@@ -30,8 +40,7 @@ class SettingsViewController: UIViewController {
             if let index = index {
                 let country = Country.allCases[index]
                 self.settings.country = country
-                self.selectCountryLabel.text = country.rawValue
-                self.updateSaveButton()
+                self.updateViews()
             }
         }
     }
@@ -41,8 +50,7 @@ class SettingsViewController: UIViewController {
             if let index = index {
                 let language = Language.allCases[index]
                 self.settings.language = language
-                self.selectLanguageLabel.text = language.rawValue
-                self.updateSaveButton()
+                self.updateViews()
             }
         }
     }
@@ -54,9 +62,14 @@ class SettingsViewController: UIViewController {
             multiSelectionVC.indicesSelected = { indices in
                 let categories = indices.map { Category.allCases[$0] }
                 self.settings.categories = categories
-                self.selectedCategoriesLabel.text = (categories.map{$0.rawValue}).joined(separator: ", ")
-                self.updateSaveButton()
+                self.updateViews()
             }
+            
+            if let categories = settings.categories {
+                let indices = categories.map { Category.allCases.firstIndex(of: $0) ?? -1 }.filter { $0 >= 0 }
+                multiSelectionVC.selectedIndices = Set(indices)
+            }
+            
             self.present(multiSelectionVC, animated: true)
         }
     }
@@ -68,10 +81,6 @@ class SettingsViewController: UIViewController {
             singleSelectionVC.indexSelected = indexSelected
             self.present(singleSelectionVC, animated: true)
         }
-    }
-    
-    private func updateSaveButton() {
-        saveButton.isEnabled = settings.country != nil && settings.language != nil && settings.categories != nil
     }
     
     @IBAction func saveClicked(_ sender: Any) {

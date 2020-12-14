@@ -8,14 +8,20 @@
 import UIKit
 
 class MultiSelectionsView: SelectionsView {
-    var selectedIndices: Set<Int> = []
+    var selectedIndices: Set<Int> = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     var maxSelections : Int?
     
-    func configure(with title: String, values: [String] , maxSelections: Int) {
+    func configure(with title: String, values: [String] , maxSelections: Int, selectedIndices: Set<Int> = []) {
         super.configure(with: title, values: values)
         self.maxSelections = maxSelections
+        self.selectedIndices = selectedIndices
         
-        //        updateSaveButton()
+        updateSaveButton()
     }
     
     override func isCellChecked(atIndexPath indexPath: IndexPath) -> Bool {
@@ -32,7 +38,6 @@ class MultiSelectionsView: SelectionsView {
         }
         
         tableView.reloadData()
-        
         updateSaveButton()
     }
     

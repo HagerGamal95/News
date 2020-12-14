@@ -6,8 +6,8 @@
 //
 
 import Foundation
-extension UserDefaults {
 
+extension UserDefaults {
     static func get<T: Codable>(withKey key: String) -> T? {
         if let data = UserDefaults.standard.data(forKey: key) {
             do {
@@ -20,7 +20,7 @@ extension UserDefaults {
         }
         return nil
     }
-
+    
     static func set<T: Codable>(object: T, withkey key: String) {
         do {
             let jsonEncoder = JSONEncoder()

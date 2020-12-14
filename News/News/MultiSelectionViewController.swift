@@ -13,7 +13,7 @@ class MultiSelectionViewController: UIViewController {
     
     var selectionsTitle: String?
     var selectionsValues: [String]?
-    
+    var selectedIndices: Set<Int> = []
     var indicesSelected: ((Set<Int>) -> Void)?
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class MultiSelectionViewController: UIViewController {
         
         multiSelectionView.delegate = self
         if let title = self.selectionsTitle, let values = self.selectionsValues {
-            multiSelectionView.configure(with: title, values: values, maxSelections: 3)
+            multiSelectionView.configure(with: title, values: values, maxSelections: 3, selectedIndices: selectedIndices)
         }
     }
 }

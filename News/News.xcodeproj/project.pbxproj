@@ -35,6 +35,7 @@
 		0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F00E2586934800488AEC /* SingleSelectionViewController.swift */; };
 		0129F0142586A0DA00488AEC /* MultiSelectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */; };
 		0129F0192586A5F200488AEC /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */; };
+		0129F01E2586D75400488AEC /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F01D2586D75400488AEC /* LocalStore.swift */; };
 		6230B8F275A9A0CC108BADDE /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */; };
 		93E26932220341E3D3D9097D /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF37809CDA3AEA04C21B04F /* Pods_News_NewsUITests.framework */; };
 		DE90DDAF7AB39D0D016BAEF9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E126D0CE273F5A97C75B05 /* Pods_News.framework */; };
@@ -92,6 +93,7 @@
 		0129F00E2586934800488AEC /* SingleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionViewController.swift; sourceTree = "<group>"; };
 		0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionsView.swift; sourceTree = "<group>"; };
 		0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
+		0129F01D2586D75400488AEC /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C943990D74B0C4888FFB5D /* Pods-NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-NewsTests/Pods-NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28E126D0CE273F5A97C75B05 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				0129EFA12586162700488AEC /* Constants.swift */,
 				0129F00E2586934800488AEC /* SingleSelectionViewController.swift */,
 				0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */,
+				0129F01D2586D75400488AEC /* LocalStore.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */,
 				0129EFF925867DC200488AEC /* Source.swift in Sources */,
 				0129EFF425867DA700488AEC /* Article.swift in Sources */,
+				0129F01E2586D75400488AEC /* LocalStore.swift in Sources */,
 				0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */,
 				0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */,
 				0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */,
