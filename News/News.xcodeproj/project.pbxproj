@@ -44,12 +44,12 @@
 		0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F03E25879EC500488AEC /* BaseRequest.swift */; };
 		0129F0442587A45800488AEC /* HeadlinesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0432587A45800488AEC /* HeadlinesRequest.swift */; };
 		0129F0492587A53D00488AEC /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0482587A53D00488AEC /* APIs.swift */; };
-		0129F04E2587ADCC00488AEC /* HeadlinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */; };
 		0129F05C2587CFD300488AEC /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */; };
 		0129F05D2587CFD300488AEC /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */; };
 		0129F0652587CFFA00488AEC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0642587CFFA00488AEC /* CardView.swift */; };
 		0129F0702587D56E00488AEC /* TableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F06F2587D56E00488AEC /* TableViewExtention.swift */; };
 		0129F07F2587D8AB00488AEC /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */; };
+		01C72FDC258807E90072A8F9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FDB258807E90072A8F9 /* DataSource.swift */; };
 		6230B8F275A9A0CC108BADDE /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */; };
 		93E26932220341E3D3D9097D /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF37809CDA3AEA04C21B04F /* Pods_News_NewsUITests.framework */; };
 		DE90DDAF7AB39D0D016BAEF9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E126D0CE273F5A97C75B05 /* Pods_News.framework */; };
@@ -116,12 +116,12 @@
 		0129F03E25879EC500488AEC /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		0129F0432587A45800488AEC /* HeadlinesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesRequest.swift; sourceTree = "<group>"; };
 		0129F0482587A53D00488AEC /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewModel.swift; sourceTree = "<group>"; };
 		0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
 		0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineTableViewCell.xib; sourceTree = "<group>"; };
 		0129F0642587CFFA00488AEC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0129F06F2587D56E00488AEC /* TableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtention.swift; sourceTree = "<group>"; };
 		0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
+		01C72FDB258807E90072A8F9 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C943990D74B0C4888FFB5D /* Pods-NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-NewsTests/Pods-NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28E126D0CE273F5A97C75B05 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,7 +222,6 @@
 				0129F0572587CEF000488AEC /* Models */,
 				0129F0562587CED900488AEC /* controllers */,
 				0129EFBC25863BDB00488AEC /* views */,
-				0129F04D2587ADCC00488AEC /* HeadlinesViewModel.swift */,
 			);
 			path = onBoardingFlow;
 			sourceTree = "<group>";
@@ -263,6 +262,7 @@
 				0129F03725879E4600488AEC /* Response */,
 				0129F00125867F3F00488AEC /* Service Manager */,
 				0129F0482587A53D00488AEC /* APIs.swift */,
+				01C72FDB258807E90072A8F9 /* DataSource.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -648,7 +648,6 @@
 				0129F03925879E6300488AEC /* BaseResponse.swift in Sources */,
 				0129F05C2587CFD300488AEC /* HeadlineTableViewCell.swift in Sources */,
 				0129F0702587D56E00488AEC /* TableViewExtention.swift in Sources */,
-				0129F04E2587ADCC00488AEC /* HeadlinesViewModel.swift in Sources */,
 				0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */,
 				0129EFF925867DC200488AEC /* Source.swift in Sources */,
 				0129EFF425867DA700488AEC /* Article.swift in Sources */,
@@ -656,6 +655,7 @@
 				0129F0442587A45800488AEC /* HeadlinesRequest.swift in Sources */,
 				0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */,
 				0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */,
+				01C72FDC258807E90072A8F9 /* DataSource.swift in Sources */,
 				0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */,
 				0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */,
 				0129F0492587A53D00488AEC /* APIs.swift in Sources */,

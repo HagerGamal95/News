@@ -10,11 +10,13 @@ import Kingfisher
 
 class HomeViewController: UIViewController {
     
+    
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorLabel: UILabel!
-    
+    var searchController : UISearchController!
+
     var articles : [Article]?
     var settings: Setting?
     
@@ -25,12 +27,27 @@ class HomeViewController: UIViewController {
         fetchHeadlines()
 
     }
+    func addSearchBar(){
+        self.searchController = UISearchController(searchResultsController:  nil)
+            
+               self.searchController.searchResultsUpdater = self
+               self.searchController.delegate = self
+               self.searchController.searchBar.delegate = self
+            
+               self.searchController.hidesNavigationBarDuringPresentation = false
+               self.searchController.dimsBackgroundDuringPresentation = true
+            
+               self.navigationItem.titleView = searchController.searchBar
+            
+               self.definesPresentationContext = true
+    }
     func setupUI(){
         self.navigationItem.title = NSLocalizedString("Home", comment: "")
         
         tableView.register(UINib(nibName: "HeadlineTableViewCell", bundle: nil), forCellReuseIdentifier: "HeadlineTableViewCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        addSearchBar()
         
     }
     @IBAction func filterClicked(_ sender: Any) {
@@ -48,17 +65,12 @@ class HomeViewController: UIViewController {
         self.errorView.isHidden = true
         self.tableView.isHidden = true
         self.activityIndicator.startAnimating()
-        
-        guard let country = settings?.country , let category = settings?.categories?.first?.rawValue else {
-            return
-        }
-        
-        let headlinesRequest = HeadlinesRequest(country: country.rawValue, category: category, pageSize: 20)
-        APIFetcher().fetch(request: headlinesRequest, mappingInResponse: BaseResponse<Article>.self) {[unowned self] (response) in
+ 
+        let headlinesRequest = DataSource().fetchHeadlines(country: settings?.country, categories: settings?.categories, pageSize: 20) {[unowned self] (articles) in
             self.activityIndicator.stopAnimating()
             self.errorView.isHidden = true
             self.tableView.isHidden = false
-            self.articles = response.articles
+            self.articles = articles
             self.tableView.reloadData {
                 self.animateTable()
             }
@@ -67,7 +79,7 @@ class HomeViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             self.errorView.isHidden = false
             self.tableView.isHidden = true
-            
+
         }
 
     }
@@ -116,15 +128,20 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     }
     private func getPublishedDateWithServiceFormat(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        let dateStr = dateFormatter.string(fromDate: date, withFormate: DateFormatter.Formats.yyyyMMdd, local: Locale(identifier: "en"))
+        let dateStr = dateFormatter.string(fromDate: date, withFormate: DateFormatter.Formats.yyyyMMddhhmma, local: Locale(identifier: "en"))
         return dateStr
     }
     
+}
+extension HomeViewController :  UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        print("hiiii")
+    }
 }
 extension HomeViewController: SettingsViewControllerDelegate {
     func selectionsConfirmed(settings: Setting) {
         self.dismiss(animated: true)
         self.settings = settings
-        //to do search
+        fetchHeadlines()
     }
 }

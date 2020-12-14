@@ -8,16 +8,11 @@
 import Foundation
 import Alamofire
 
-class HeadlinesRequest : BaseRequestProtocol {
+struct  HeadlinesRequest : BaseRequestProtocol {
     let country:String
     let category:String
     let pageSize : Int
-    
-    init(country:String, category:String , pageSize : Int ) {
-        self.country = country
-        self.category = category
-        self.pageSize = pageSize
-    }
+
     var url: String {
         return APIs.News.getHeadlines()
     }
