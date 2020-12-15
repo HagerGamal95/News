@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct DataSource {
     func fetchHeadlines(country :Country? , categories : [Category]?, pageSize: Int , onSuccess: @escaping ([Article]) -> Void, onFailure: @escaping (ServiceError) -> Void){
@@ -41,5 +42,27 @@ struct DataSource {
                 onSuccess(articles)
             }
         }
+    }
+    
+    func fetchSearchResult(query: String, language: String, pageSize: Int, onSuccess: @escaping ([Article]) -> Void, onFailure: @escaping (ServiceError) -> Void){
+        let searchsRequest = SearchRequest(query: query, language: language, pageSize: 20)
+        APIFetcher().fetch(request: searchsRequest, mappingInResponse: BaseResponse<Article>.self) { response in
+            onSuccess(response.articles ?? [])
+        }
+        onFailure: { error in
+            onFailure(error)
+        }
+    }
+    
+    func save(article: Article) throws {
+        let realm = try Realm()
+        try realm.write {
+            realm.add(article)
+        }
+    }
+    
+    func loadArticles() throws -> [Article] {
+        let realm = try Realm()
+        return Array(realm.objects(Article.self))
     }
 }

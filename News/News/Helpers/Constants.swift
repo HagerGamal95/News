@@ -8,7 +8,7 @@
 import Foundation
 
 let kSetting = "User_Settings"
-let kApiKey = "b1cecbb5ec494a98a9e7f1e3b3e1cbc1"
+let kApiKey = "f9f8088037a145389a84a9ff585774ee"
 
 enum Category  : String ,CaseIterable , Codable {
     case business

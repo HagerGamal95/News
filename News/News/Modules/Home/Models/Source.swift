@@ -6,7 +6,10 @@
 //
 
 import Foundation
-struct Source: Codable {
-    var id: String?
-    var name: String?
+import RealmSwift
+
+@objcMembers
+class Source: Object, Codable {
+    dynamic var id: String?
+    dynamic var name: String?
 }

@@ -9,12 +9,14 @@ import UIKit
 
 class HeadlineTableViewCell: UITableViewCell {
 
+   
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var shortDescription: UILabel!
     @IBOutlet weak var publishedDateLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var backView: UIView!
     
     override func awakeFromNib() {

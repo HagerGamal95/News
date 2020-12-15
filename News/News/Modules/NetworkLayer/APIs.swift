@@ -12,5 +12,8 @@ class APIs {
         static func getHeadlines() -> String {
             return "https://newsapi.org/v2/top-headlines"
         }
+        static func getAticleBySearch() ->String {
+            return "https://newsapi.org/v2/everything"
+        }
     }
 }

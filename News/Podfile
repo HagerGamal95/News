@@ -15,6 +15,9 @@ target 'News' do
   
   #images
   pod 'Kingfisher', '~> 5.13'
+  
+  #RealmDB
+  pod 'RealmSwift'
 
   target 'NewsTests' do
     inherit! :search_paths
