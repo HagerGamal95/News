@@ -45,5 +45,10 @@ extension DateFormatter {
         self.dateFormat = format.rawValue
         return date(from: string)
     }
+    
+     func getPublishedDateWithServiceFormat(date: Date) -> String {
+        let dateStr = self.string(fromDate: date, withFormate: DateFormatter.Formats.yyyyMMddhhmma, local: Locale(identifier: "en"))
+        return dateStr
+    }
 }
 

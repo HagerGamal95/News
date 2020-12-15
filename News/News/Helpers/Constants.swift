@@ -8,8 +8,12 @@
 import Foundation
 
 let kSetting = "User_Settings"
-let kApiKey = "f9f8088037a145389a84a9ff585774ee"
+let kApiKey = "55354d8d61b3491bb859d6b2c33772c8"
 
+enum SingleViewType {
+    case country
+    case language
+}
 enum Category  : String ,CaseIterable , Codable {
     case business
     case entertainment

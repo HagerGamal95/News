@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func selectCountryClicked(_ sender: Any) {
-        presentSingleSelectionsViewController(title: "Select a Country", values: Country.allCases.map { $0.rawValue }) { index in
+        presentSingleSelectionsViewController(singleViewType: .country, title: "Select a Country", values: Country.allCases.map { $0.rawValue }) { index in
             if let index = index {
                 let country = Country.allCases[index]
                 self.settings.country = country
@@ -46,7 +46,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func selectLanguageClicked(_ sender: Any) {
-        presentSingleSelectionsViewController(title: "Select a Language", values: Language.allCases.map { $0.rawValue }) { index in
+        presentSingleSelectionsViewController(singleViewType: .language, title: "Select a Language", values: Language.allCases.map { $0.rawValue }) { index in
             if let index = index {
                 let language = Language.allCases[index]
                 self.settings.language = language
@@ -74,11 +74,23 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    private func presentSingleSelectionsViewController(title: String, values: [String], indexSelected: ((Int?) -> Void)?) {
+    private func presentSingleSelectionsViewController(singleViewType : SingleViewType , title: String, values: [String], indexSelected: ((Int?) -> Void)?) {
         if let singleSelectionVC = self.createViewControlller(controllerId: "SingleSelectionViewController") as? SingleSelectionViewController {
             singleSelectionVC.selectionsTitle = title
             singleSelectionVC.selectionsValues = values
             singleSelectionVC.indexSelected = indexSelected
+            switch singleViewType {
+            case .country:
+                if let  country = settings.country {
+                    let indix = values.firstIndex(of: country.rawValue)
+                    singleSelectionVC.selectedIndix = indix
+                }
+            case .language:
+                if let  language = settings.language {
+                    let indix = values.firstIndex(of: language.rawValue)
+                    singleSelectionVC.selectedIndix = indix
+                }
+            }
             self.present(singleSelectionVC, animated: true)
         }
     }

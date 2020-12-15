@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,28 +21,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-HK-ZO2">
-                    <rect key="frame" x="20" y="64" width="330" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="20" y="64" width="314" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.25585773589999999" green="0.72342926259999996" blue="0.60391026739999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nv7-fk-Hhn">
-                    <rect key="frame" x="20" y="114" width="374" height="728"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="20" y="114" width="374" height="762"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-8q-gVq">
-                    <rect key="frame" x="360" y="64" width="34" height="30"/>
-                    <state key="normal" title="Save"/>
+                    <rect key="frame" x="344" y="64" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.89542990919999998" green="0.73087197540000004" blue="0.29791206120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="IY7-Qp-YfR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="saveClicked:" destination="-1" eventType="touchUpInside" id="gln-RC-6G2"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="nv7-fk-Hhn" firstAttribute="top" secondItem="P8q-HK-ZO2" secondAttribute="bottom" constant="20" id="7tR-3s-Zfg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nv7-fk-Hhn" secondAttribute="bottom" constant="20" id="KnE-ms-8rB"/>
+                <constraint firstAttribute="bottom" secondItem="nv7-fk-Hhn" secondAttribute="bottom" constant="20" id="KnE-ms-8rB"/>
                 <constraint firstItem="gfz-8q-gVq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="O2a-Se-Trr"/>
                 <constraint firstItem="P8q-HK-ZO2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SFR-HZ-X5n"/>
                 <constraint firstItem="gfz-8q-gVq" firstAttribute="leading" secondItem="P8q-HK-ZO2" secondAttribute="trailing" constant="10" id="WVV-vk-NEE"/>
@@ -57,9 +68,4 @@
             <point key="canvasLocation" x="75" y="64"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

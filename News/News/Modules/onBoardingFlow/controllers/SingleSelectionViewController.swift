@@ -12,7 +12,7 @@ class SingleSelectionViewController: UIViewController {
     
     var selectionsTitle: String?
     var selectionsValues: [String]?
-    
+    var selectedIndix: Int?
     var indexSelected: ((Int?) -> Void)?
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class SingleSelectionViewController: UIViewController {
         
         singleSelectionView.delegate = self
         if let title = self.selectionsTitle, let values = self.selectionsValues {
-            singleSelectionView.configure(with: title, values: values)
+            singleSelectionView.configure(with: title, values: values,selectedIndix: selectedIndix)
         }
     }
 }

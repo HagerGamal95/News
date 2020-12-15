@@ -25,6 +25,10 @@ class SelectionsView: UIView , CustomView {
             tableView.delegate = self
             tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 100
+            
+            let view = UIView()
+            view.frame.size.height = 1
+            tableView.tableFooterView = view
         }
     }
     

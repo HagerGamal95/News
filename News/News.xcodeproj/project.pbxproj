@@ -51,6 +51,9 @@
 		0129F07F2587D8AB00488AEC /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */; };
 		01C72FDC258807E90072A8F9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FDB258807E90072A8F9 /* DataSource.swift */; };
 		01C72FE425880FCF0072A8F9 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FE325880FCF0072A8F9 /* SearchRequest.swift */; };
+		01C72FF52588DC8C0072A8F9 /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FF42588DC8C0072A8F9 /* UIButton+extention.swift */; };
+		01C72FFA2588FAE90072A8F9 /* SavedArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FF92588FAE90072A8F9 /* SavedArticlesViewController.swift */; };
+		01C72FFF2589160A0072A8F9 /* ArticlesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C72FFE2589160A0072A8F9 /* ArticlesTableViewAdapter.swift */; };
 		6230B8F275A9A0CC108BADDE /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */; };
 		93E26932220341E3D3D9097D /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF37809CDA3AEA04C21B04F /* Pods_News_NewsUITests.framework */; };
 		DE90DDAF7AB39D0D016BAEF9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E126D0CE273F5A97C75B05 /* Pods_News.framework */; };
@@ -124,6 +127,9 @@
 		0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
 		01C72FDB258807E90072A8F9 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		01C72FE325880FCF0072A8F9 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		01C72FF42588DC8C0072A8F9 /* UIButton+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
+		01C72FF92588FAE90072A8F9 /* SavedArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArticlesViewController.swift; sourceTree = "<group>"; };
+		01C72FFE2589160A0072A8F9 /* ArticlesTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewAdapter.swift; sourceTree = "<group>"; };
 		0CF9CC93B0FE9F91F6A56023 /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C943990D74B0C4888FFB5D /* Pods-NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-NewsTests/Pods-NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28E126D0CE273F5A97C75B05 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +246,7 @@
 				0129EFDF2586523100488AEC /* UIView+extension.swift */,
 				0129F06F2587D56E00488AEC /* TableViewExtention.swift */,
 				0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */,
+				01C72FF42588DC8C0072A8F9 /* UIButton+extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -351,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				0129EF66258611B800488AEC /* HomeViewController.swift */,
+				01C72FF92588FAE90072A8F9 /* SavedArticlesViewController.swift */,
+				01C72FFE2589160A0072A8F9 /* ArticlesTableViewAdapter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -631,6 +640,7 @@
 			files = (
 				0129F02D25879DFE00488AEC /* CustomError.swift in Sources */,
 				0129EFA22586162700488AEC /* Constants.swift in Sources */,
+				01C72FF52588DC8C0072A8F9 /* UIButton+extention.swift in Sources */,
 				0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */,
 				0129EF67258611B800488AEC /* HomeViewController.swift in Sources */,
 				0129EFAE25862F7B00488AEC /* UserDefaultsDecoder.swift in Sources */,
@@ -642,6 +652,7 @@
 				0129F02325879DBD00488AEC /* AlamofireExtensions.swift in Sources */,
 				0129EFA8258619AF00488AEC /* Setting.swift in Sources */,
 				0129EF63258611B800488AEC /* AppDelegate.swift in Sources */,
+				01C72FFF2589160A0072A8F9 /* ArticlesTableViewAdapter.swift in Sources */,
 				0129EF972586149500488AEC /* SplashViewController.swift in Sources */,
 				0129EF65258611B800488AEC /* SceneDelegate.swift in Sources */,
 				0129F0192586A5F200488AEC /* MultiSelectionViewController.swift in Sources */,
@@ -661,6 +672,7 @@
 				0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */,
 				01C72FDC258807E90072A8F9 /* DataSource.swift in Sources */,
 				0129EFB8258636A300488AEC /* SettingsViewController.swift in Sources */,
+				01C72FFA2588FAE90072A8F9 /* SavedArticlesViewController.swift in Sources */,
 				0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */,
 				0129F0492587A53D00488AEC /* APIs.swift in Sources */,
 				0129F0652587CFFA00488AEC /* CardView.swift in Sources */,

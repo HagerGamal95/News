@@ -10,6 +10,12 @@ import UIKit
 class SingleSelectionView: SelectionsView {
     var selectedIndex: Int?
     
+    func configure(with title: String, values: [String], selectedIndix : Int?) {
+        super.configure(with: title, values: values)
+        self.selectedIndex = selectedIndix
+        updateSaveButton()
+    }
+    
     override func isCellChecked(atIndexPath indexPath: IndexPath) -> Bool {
         indexPath.row == selectedIndex
     }
