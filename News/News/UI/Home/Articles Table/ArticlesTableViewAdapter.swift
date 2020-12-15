@@ -57,7 +57,7 @@ class ArticlesTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDele
         let article = self.articles[indexPath.row]
         
         if let imageSource = article.urlToImage {
-            cell.myImage.kf.setImage(with: URL(string: imageSource), placeholder: UIImage(named: "placeholder"))
+            cell.myImage.kf.setImage(with: URL(string: imageSource), placeholder: UIImage(named: "Logo"))
         }
         
         cell.titleLabel.text = article.title
