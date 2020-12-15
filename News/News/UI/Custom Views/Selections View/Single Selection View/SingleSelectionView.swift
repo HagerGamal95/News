@@ -35,6 +35,6 @@ class SingleSelectionView: SelectionsView {
     }
     
     private func updateSaveButton() {
-        saveButton.isEnabled = selectedIndex != nil
+        setSaveButton(enabled: selectedIndex != nil)
     }
 }

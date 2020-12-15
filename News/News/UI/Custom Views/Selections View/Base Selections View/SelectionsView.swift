@@ -50,9 +50,15 @@ class SelectionsView: UIView , CustomView {
         tableView.reloadData()
     }
     
+    
     func setupView() {
         tableView.register(UINib(nibName: "SelectionTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectionTableViewCell")
-        saveButton.isEnabled = false
+        setSaveButton(enabled: false)
+    }
+    
+    func setSaveButton(enabled isEnabled: Bool) {
+        saveButton.isEnabled = isEnabled
+        saveButton.backgroundColor = isEnabled ? UIColor(named: "accentColor") : UIColor.lightGray
     }
     
     func isCellChecked(atIndexPath indexPath: IndexPath) -> Bool {

@@ -42,6 +42,6 @@ class MultiSelectionsView: SelectionsView {
     }
     
     private func updateSaveButton() {
-        saveButton.isEnabled = selectedIndices.count == maxSelections
+        setSaveButton(enabled: selectedIndices.count == maxSelections)
     }
 }
