@@ -35,10 +35,12 @@ struct DataSource {
             if let error = generalError {
                 onFailure(error)
             } else {
-                let articles = totalArticles.sorted(by: { (lhs, rhs) -> Bool in
+                var articles = totalArticles.sorted(by: { (lhs, rhs) -> Bool in
                     guard let lhsDate = lhs.publishedAt, let rhsDate = rhs.publishedAt else { return false }
                     return lhsDate.timeIntervalSince1970 < rhsDate.timeIntervalSince1970
                 })
+                
+                setArticlesSavedValue(articles: &articles)
                 onSuccess(articles)
             }
         }
@@ -47,23 +49,41 @@ struct DataSource {
     func fetchSearchResult(query: String, language: String, pageSize: Int, onSuccess: @escaping ([Article]) -> Void, onFailure: @escaping (ServiceError) -> Void){
         let searchsRequest = SearchRequest(query: query, language: language, pageSize: 20)
         APIFetcher().fetch(request: searchsRequest, mappingInResponse: BaseResponse<Article>.self) { response in
-            onSuccess(response.articles ?? [])
+            var articles = response.articles ?? []
+            setArticlesSavedValue(articles: &articles)
+            onSuccess(articles)
         }
         onFailure: { error in
             onFailure(error)
         }
     }
     
+    private func setArticlesSavedValue(articles: inout [Article]) {
+        guard let savedArticles = try? loadArticles() else { return }
+        articles.forEach { article in
+            article.isSaved = savedArticles.contains { $0.url == article.url }
+        }
+    }
+    
     func save(article: Article) throws {
         let realm = try Realm()
         try realm.write {
-            realm.add(article)
+            realm.add(article, update: .modified)
         }
     }
     
     func loadArticles() throws -> [Article] {
         let realm = try Realm()
         return Array(realm.objects(Article.self))
+    }
+    
+    func delete(article: Article) throws {
+        guard let url = article.url else { return }
+        let realm = try Realm()
+        let article = realm.objects(Article.self).filter("url == %@", url)
+        try realm.write {
+            realm.delete(article)
+        }
     }
     
     func save(settings: Setting?) {

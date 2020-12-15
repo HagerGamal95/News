@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorLabel: UILabel!
+    
     var searchController : UISearchController!
     var articlesTableViewAdapter: ArticlesTableViewAdapter?
     
@@ -29,9 +30,9 @@ class HomeViewController: UIViewController {
         }
     }
     
+    var settings: Setting?
     let dataSource = DataSource()
     var articles : [Article]?
-    var settings: Setting?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,7 +152,17 @@ extension HomeViewController : ArticlesTableViewAdapterDelegate {
     }
     
     func article(_ article: Article, saveButtonClickedAtIndex index: Int) {
-        try? dataSource.save(article: article)
+        do {
+            if article.isSaved {
+                try dataSource.delete(article: article)
+            } else {
+                guard let article = article.copy() as? Article else { return }
+                try dataSource.save(article: article)
+            }
+            
+            article.isSaved = !article.isSaved
+            articlesTableViewAdapter?.reload(rows: [index])
+        } catch {}
     }
 }
 

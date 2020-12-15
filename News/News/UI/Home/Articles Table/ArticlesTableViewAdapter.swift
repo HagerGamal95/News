@@ -42,6 +42,11 @@ class ArticlesTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDele
         tableView.reloadData()
     }
     
+    func reload(rows: [Int]) {
+        let indexPaths = rows.map { IndexPath(row: $0, section: 0) }
+        tableView?.reloadRows(at: indexPaths, with: .automatic)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
@@ -61,8 +66,11 @@ class ArticlesTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDele
         cell.publishedDateLabel.text = DateFormatter().getPublishedDateWithServiceFormat(date:  article.publishedAt ?? Date())
         
         cell.saveButton.isHidden = !showSaveButton
-        cell.saveButton.tag = indexPath.row
-        cell.saveButton.addTarget(self, action: #selector(saveButtonClicked(_:)), for: .touchUpInside)
+        if showSaveButton {
+            cell.saveButton.tag = indexPath.row
+            cell.saveButton.tintColor = article.isSaved ? UIColor(named: "accentColor")  : .gray
+            cell.saveButton.addTarget(self, action: #selector(saveButtonClicked(_:)), for: .touchUpInside)
+        }
         
         return cell
     }
