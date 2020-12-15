@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    var dataSource = DataSource()
+    let dataSource = DataSource()
     var articles : [Article]?
     var settings: Setting?
     
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        settings = LocalStore.loadSettings()
+        settings = dataSource.loadSettings()
         fetchHeadlines()
     }
     
@@ -78,6 +78,13 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func favouriteClicked(_ sender: Any) {
+        guard let articles = try? dataSource.loadArticles(), !articles.isEmpty else {
+            let alert = UIAlertController(title: "Alert", message: "No saved articles yet.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         guard let favouriteArticlesViewController = createViewControlller(controllerId: "SavedArticlesViewController") as? SavedArticlesViewController else { return }
         navigationController?.pushViewController(favouriteArticlesViewController, animated: true)
     }

@@ -10,7 +10,8 @@ import SafariServices
 
 class SavedArticlesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var dataSource = DataSource()
+    
+    let dataSource = DataSource()
     var articles : [Article]?
     var articlesTableViewAdapter: ArticlesTableViewAdapter?
     

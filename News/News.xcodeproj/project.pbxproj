@@ -29,13 +29,11 @@
 		0129EFDB2586520100488AEC /* CustomViewNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */; };
 		0129EFE02586523100488AEC /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFDF2586523100488AEC /* UIView+extension.swift */; };
 		0129EFE625865BBC00488AEC /* SingleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFE525865BBC00488AEC /* SingleSelectionView.swift */; };
-		0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFEB25867D8C00488AEC /* BaseNews.swift */; };
 		0129EFF425867DA700488AEC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFF325867DA700488AEC /* Article.swift */; };
 		0129EFF925867DC200488AEC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129EFF825867DC200488AEC /* Source.swift */; };
 		0129F00F2586934800488AEC /* SingleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F00E2586934800488AEC /* SingleSelectionViewController.swift */; };
 		0129F0142586A0DA00488AEC /* MultiSelectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */; };
 		0129F0192586A5F200488AEC /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */; };
-		0129F01E2586D75400488AEC /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F01D2586D75400488AEC /* LocalStore.swift */; };
 		0129F02325879DBD00488AEC /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02225879DBD00488AEC /* AlamofireExtensions.swift */; };
 		0129F02825879DDB00488AEC /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02725879DDB00488AEC /* APIFetcher.swift */; };
 		0129F02D25879DFE00488AEC /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0129F02C25879DFE00488AEC /* CustomError.swift */; };
@@ -105,13 +103,11 @@
 		0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewNibLoadable.swift; sourceTree = "<group>"; };
 		0129EFDF2586523100488AEC /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0129EFE525865BBC00488AEC /* SingleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionView.swift; sourceTree = "<group>"; };
-		0129EFEB25867D8C00488AEC /* BaseNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNews.swift; sourceTree = "<group>"; };
 		0129EFF325867DA700488AEC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		0129EFF825867DC200488AEC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		0129F00E2586934800488AEC /* SingleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionViewController.swift; sourceTree = "<group>"; };
 		0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionsView.swift; sourceTree = "<group>"; };
 		0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
-		0129F01D2586D75400488AEC /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		0129F02225879DBD00488AEC /* AlamofireExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExtensions.swift; sourceTree = "<group>"; };
 		0129F02725879DDB00488AEC /* APIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
 		0129F02C25879DFE00488AEC /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -194,13 +190,12 @@
 		0129EF61258611B800488AEC /* News */ = {
 			isa = PBXGroup;
 			children = (
-				0129F0552587CEA300488AEC /* Modules */,
-				0129EFAC25862F5100488AEC /* Helpers */,
 				0129EF62258611B800488AEC /* AppDelegate.swift */,
 				0129EF64258611B800488AEC /* SceneDelegate.swift */,
-				0129EF68258611B800488AEC /* Main.storyboard */,
+				0147475B258929FF0070B04E /* Model */,
+				0129EFAC25862F5100488AEC /* Helpers */,
+				0147475C25892A0B0070B04E /* UI */,
 				0129EF6B258611B900488AEC /* Assets.xcassets */,
-				0129EF6D258611B900488AEC /* LaunchScreen.storyboard */,
 				0129EF70258611B900488AEC /* Info.plist */,
 			);
 			path = News;
@@ -224,66 +219,33 @@
 			path = NewsUITests;
 			sourceTree = "<group>";
 		};
-		0129EF952586146200488AEC /* onBoardingFlow */ = {
+		0129EF952586146200488AEC /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				0129F0572587CEF000488AEC /* Models */,
-				0129F0562587CED900488AEC /* controllers */,
-				0129EFBC25863BDB00488AEC /* views */,
+				0129EF962586149500488AEC /* SplashViewController.swift */,
+				0129EFB7258636A300488AEC /* SettingsViewController.swift */,
 			);
-			path = onBoardingFlow;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		0129EFAC25862F5100488AEC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				0129EFA12586162700488AEC /* Constants.swift */,
-				0129F01D2586D75400488AEC /* LocalStore.swift */,
-				0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */,
-				0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */,
-				0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */,
-				0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */,
-				0129EFDF2586523100488AEC /* UIView+extension.swift */,
-				0129F06F2587D56E00488AEC /* TableViewExtention.swift */,
 				0129F07E2587D8AB00488AEC /* DateFormatter+extension.swift */,
-				01C72FF42588DC8C0072A8F9 /* UIButton+extention.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		0129EFBC25863BDB00488AEC /* views */ = {
-			isa = PBXGroup;
-			children = (
-				0129EFBD25863C9500488AEC /* SelectionsView.swift */,
-				0129EFC525863CA900488AEC /* SelectionsView.xib */,
-				0129EFCA25864C5C00488AEC /* SelectionTableViewCell.swift */,
-				0129EFCB25864C5C00488AEC /* SelectionTableViewCell.xib */,
-				0129EFE525865BBC00488AEC /* SingleSelectionView.swift */,
-				0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */,
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		0129EFEA25867CBA00488AEC /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				0129F03D25879EA800488AEC /* Request */,
-				0129F03725879E4600488AEC /* Response */,
+				0129F03D25879EA800488AEC /* Requests */,
+				0129F03725879E4600488AEC /* Responses */,
 				0129F00125867F3F00488AEC /* Service Manager */,
 				0129F0482587A53D00488AEC /* APIs.swift */,
-				01C72FDB258807E90072A8F9 /* DataSource.swift */,
 			);
 			path = NetworkLayer;
-			sourceTree = "<group>";
-		};
-		0129EFFD25867DEC00488AEC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0129EFEB25867D8C00488AEC /* BaseNews.swift */,
-				0129EFF325867DA700488AEC /* Article.swift */,
-				0129EFF825867DC200488AEC /* Source.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		0129F00125867F3F00488AEC /* Service Manager */ = {
@@ -297,81 +259,153 @@
 			name = "Service Manager";
 			sourceTree = "<group>";
 		};
-		0129F03725879E4600488AEC /* Response */ = {
+		0129F03725879E4600488AEC /* Responses */ = {
 			isa = PBXGroup;
 			children = (
 				0129F03825879E6300488AEC /* BaseResponse.swift */,
 			);
-			name = Response;
+			name = Responses;
 			sourceTree = "<group>";
 		};
-		0129F03D25879EA800488AEC /* Request */ = {
+		0129F03D25879EA800488AEC /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				0129F03E25879EC500488AEC /* BaseRequest.swift */,
 				0129F0432587A45800488AEC /* HeadlinesRequest.swift */,
 				01C72FE325880FCF0072A8F9 /* SearchRequest.swift */,
 			);
-			name = Request;
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		0129F0542587CE8000488AEC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0129F0592587CF8800488AEC /* Views */,
-				0129EFFD25867DEC00488AEC /* Models */,
-				0129F0582587CF2800488AEC /* Controllers */,
+				0129EF66258611B800488AEC /* HomeViewController.swift */,
+				01C72FF92588FAE90072A8F9 /* SavedArticlesViewController.swift */,
+				0129F0592587CF8800488AEC /* Articles Table */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		0129F0552587CEA300488AEC /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				0129EFEA25867CBA00488AEC /* NetworkLayer */,
-				0129EF952586146200488AEC /* onBoardingFlow */,
-				0129F0542587CE8000488AEC /* Home */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		0129F0562587CED900488AEC /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */,
-				0129F00E2586934800488AEC /* SingleSelectionViewController.swift */,
-				0129EF962586149500488AEC /* SplashViewController.swift */,
-				0129EFB7258636A300488AEC /* SettingsViewController.swift */,
-			);
-			path = controllers;
 			sourceTree = "<group>";
 		};
 		0129F0572587CEF000488AEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				0129EFA7258619AF00488AEC /* Setting.swift */,
+				0129EFF325867DA700488AEC /* Article.swift */,
+				0129EFF825867DC200488AEC /* Source.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0129F0582587CF2800488AEC /* Controllers */ = {
+		0129F0592587CF8800488AEC /* Articles Table */ = {
 			isa = PBXGroup;
 			children = (
-				0129EF66258611B800488AEC /* HomeViewController.swift */,
-				01C72FF92588FAE90072A8F9 /* SavedArticlesViewController.swift */,
+				0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */,
+				0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */,
 				01C72FFE2589160A0072A8F9 /* ArticlesTableViewAdapter.swift */,
 			);
-			path = Controllers;
+			path = "Articles Table";
 			sourceTree = "<group>";
 		};
-		0129F0592587CF8800488AEC /* Views */ = {
+		0147475B258929FF0070B04E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0129F05A2587CFD300488AEC /* HeadlineTableViewCell.swift */,
-				0129F05B2587CFD300488AEC /* HeadlineTableViewCell.xib */,
-				0129F0642587CFFA00488AEC /* CardView.swift */,
+				0129F0572587CEF000488AEC /* Models */,
+				0129EFEA25867CBA00488AEC /* NetworkLayer */,
+				0147477025892CDC0070B04E /* Storage */,
+				01C72FDB258807E90072A8F9 /* DataSource.swift */,
 			);
-			path = Views;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0147475C25892A0B0070B04E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0147476C25892C9E0070B04E /* Storyboards */,
+				0147475D25892AA60070B04E /* Helpers */,
+				0147476125892B170070B04E /* Custom Views */,
+				0129EF952586146200488AEC /* Onboarding */,
+				0129F0542587CE8000488AEC /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0147475D25892AA60070B04E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFDA2586520100488AEC /* CustomViewNibLoadable.swift */,
+				0129EFB2258634AB00488AEC /* UIViewController + Extention.swift */,
+				0129EFDF2586523100488AEC /* UIView+extension.swift */,
+				0129EFD2258651C500488AEC /* NibLoadable+Reusable.swift */,
+				0129F06F2587D56E00488AEC /* TableViewExtention.swift */,
+				01C72FF42588DC8C0072A8F9 /* UIButton+extention.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0147476125892B170070B04E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				0129F0642587CFFA00488AEC /* CardView.swift */,
+				0147476225892B210070B04E /* Selections View */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		0147476225892B210070B04E /* Selections View */ = {
+			isa = PBXGroup;
+			children = (
+				0147476525892BA50070B04E /* Base Selections View */,
+				0147476325892B3B0070B04E /* Single Selection View */,
+				0147476425892B4D0070B04E /* Multiple Selections View */,
+			);
+			path = "Selections View";
+			sourceTree = "<group>";
+		};
+		0147476325892B3B0070B04E /* Single Selection View */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFE525865BBC00488AEC /* SingleSelectionView.swift */,
+				0129F00E2586934800488AEC /* SingleSelectionViewController.swift */,
+			);
+			path = "Single Selection View";
+			sourceTree = "<group>";
+		};
+		0147476425892B4D0070B04E /* Multiple Selections View */ = {
+			isa = PBXGroup;
+			children = (
+				0129F0132586A0DA00488AEC /* MultiSelectionsView.swift */,
+				0129F0182586A5F200488AEC /* MultiSelectionViewController.swift */,
+			);
+			path = "Multiple Selections View";
+			sourceTree = "<group>";
+		};
+		0147476525892BA50070B04E /* Base Selections View */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFBD25863C9500488AEC /* SelectionsView.swift */,
+				0129EFC525863CA900488AEC /* SelectionsView.xib */,
+				0129EFCB25864C5C00488AEC /* SelectionTableViewCell.xib */,
+				0129EFCA25864C5C00488AEC /* SelectionTableViewCell.swift */,
+			);
+			path = "Base Selections View";
+			sourceTree = "<group>";
+		};
+		0147476C25892C9E0070B04E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0129EF68258611B800488AEC /* Main.storyboard */,
+				0129EF6D258611B900488AEC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0147477025892CDC0070B04E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0129EFAD25862F7B00488AEC /* UserDefaultsDecoder.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		92ACC443796C2F2E9AAD0A9A /* Pods */ = {
@@ -641,7 +675,6 @@
 				0129F02D25879DFE00488AEC /* CustomError.swift in Sources */,
 				0129EFA22586162700488AEC /* Constants.swift in Sources */,
 				01C72FF52588DC8C0072A8F9 /* UIButton+extention.swift in Sources */,
-				0129EFEC25867D8C00488AEC /* BaseNews.swift in Sources */,
 				0129EF67258611B800488AEC /* HomeViewController.swift in Sources */,
 				0129EFAE25862F7B00488AEC /* UserDefaultsDecoder.swift in Sources */,
 				0129EFCC25864C5C00488AEC /* SelectionTableViewCell.swift in Sources */,
@@ -666,7 +699,6 @@
 				0129EFF925867DC200488AEC /* Source.swift in Sources */,
 				0129EFF425867DA700488AEC /* Article.swift in Sources */,
 				01C72FE425880FCF0072A8F9 /* SearchRequest.swift in Sources */,
-				0129F01E2586D75400488AEC /* LocalStore.swift in Sources */,
 				0129F0442587A45800488AEC /* HeadlinesRequest.swift in Sources */,
 				0129EFB3258634AB00488AEC /* UIViewController + Extention.swift in Sources */,
 				0129F03F25879EC500488AEC /* BaseRequest.swift in Sources */,

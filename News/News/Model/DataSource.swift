@@ -65,4 +65,12 @@ struct DataSource {
         let realm = try Realm()
         return Array(realm.objects(Article.self))
     }
+    
+    func save(settings: Setting?) {
+        UserDefaults.set(object: settings, withkey: kSetting)
+    }
+    
+    func loadSettings() -> Setting? {
+        UserDefaults.get(withKey: kSetting)
+    }
 }

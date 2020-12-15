@@ -8,9 +8,11 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    let dataSource = DataSource()
+
     var settings: Setting? {
-        get { LocalStore.loadSettings() }
-        set { LocalStore.save(settings: newValue) }
+        get { dataSource.loadSettings() }
+        set { dataSource.save(settings: newValue) }
     }
     
     override func viewDidAppear(_ animated: Bool) {
